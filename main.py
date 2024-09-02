@@ -5,6 +5,9 @@ import os
 from datetime import datetime
 import sys
 
+# Definir um novo timeout de 10 minutos 60 segundos * 10
+timeout = 60*10 #configuração padrão da TP
+
 def load_config(json_path):
     """Carrega as configurações do arquivo JSON."""
     with open(json_path, 'r') as file:
@@ -18,6 +21,10 @@ def get_connection_string(config):
             f"mssql+pyodbc://{config['server']}/{config['database']}"
             "?driver=SQL+Server+Native+Client+11.0"
             "&trusted_connection=yes"
+            'Integrated Security=SSPI;' #configuração padrão da TP
+            'Persist Security Info=True;' #configuração padrão da TP
+            'APP=Dynamic Copy Table/1.0.0, Python, BI CORP;' #configuração padrão da TP
+            'QueryTimeout=' + str(timeout) + ';' #configuração padrão da TP
         )
         return conn_str
     except KeyError as e:
