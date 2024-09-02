@@ -1,3 +1,10 @@
 {
-    "caminho_pasta": "D:/Thiago/TP - Home Office/BI/Python/extrair_resultados_sql/resultado"
+    "connection_string": {
+        "driver": "SQL Server Native Client 11.0",
+        "server": "ListBiMis",
+        "database": "dbStone",
+        "trusted_connection": "yes"
+    },
+    "output_path": "D:/Thiago/TP - Home Office/BI/Python/extrair_resultados_sql/resultado",
+    "file_prefix": "BD_TON"
 }
