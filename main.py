@@ -19,4 +19,4 @@ Query = pd.read_sql_query(
 
 DF = pd.DataFrame(Query)
 
-DF.to_csv('BD_TON'+datetime.now().strftime("%Y%m%d")+'.csv',index=False,encoding='utf-8')
+DF.to_csv('BD_TON'+datetime.now().strftime("%Y%m%d")+'.csv',index=False,encoding='utf-8') 
