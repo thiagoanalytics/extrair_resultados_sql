@@ -10,7 +10,7 @@ timeout = 60*10 #configuração padrão da TP
 
 def load_config(json_path):
     """Carrega as configurações do arquivo JSON."""
-    with open(json_path, 'r') as file:
+    with open(json_path, 'r') as file: 
         config = json.load(file)
     return config
 
