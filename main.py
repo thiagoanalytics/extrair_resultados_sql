@@ -6,6 +6,9 @@ from datetime import datetime
 import sys
 import configparser  # Para leitura do arquivo .ini
 
+enable_venv = os.path.join(os.path.dirname(os.path.abspath(__file__)), r'.venv\Scripts\activate_this.py')
+exec(open(enable_venv).read(), {'__file__': enable_venv})
+
 # Definir um novo timeout de 10 minutos 60 segundos * 10
 timeout = 60 * 10  # configuração padrão da TP
 
